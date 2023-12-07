@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+void main()
+{
+    printf("----------------Entry Checking Machine----------------\n");
+    int person = 1;
+    int entry = 0;
+    int waiting =0;
+    float entry_time;
+
+
+
+    while(person <= 4)                  //Total staffs
+    {
+        printf("\n\n\nEnter Your Entry Time: ");
+        scanf("%f",&entry_time);
+        if(entry_time <= 9.15)          // Entry Time
+        {
+            printf("\n*Good Morning*\nComing In !!!");
+            entry++;
+            printf("\n*** Person %d is Perfect in Time Management ***",person);
+        }
+        else                            //Late comers
+        {
+            printf("\n*Good Morning*\nWait a Minute!");
+            printf("\nYou are Late Today So, '10 percent' of Your's Today Salary is Deducted");
+            printf("\nPlease make Punctuality");
+            waiting++;
+            printf("\n*** Person %d is Late Comer ***",person);
+        }
+        person++;
+    }
+    printf("\n\n\nToday Perfect Time Comers are/is '%d' ",entry);
+    printf("\n\nToday late comers are/is '%d' ",waiting);
+}

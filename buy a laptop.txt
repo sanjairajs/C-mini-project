@@ -1,0 +1,163 @@
+#include <stdio.h>
+void main()
+{
+    // Convo b/w seller and buyer about buying Laptop
+    printf("----------------WELCOME TO RELIANCE MALL-----------------\n");
+    printf("-------------WELCOME TO THE LAPTOP SECTION----------------\n");
+
+    char purpose;
+    char brand;
+    int price;
+
+
+    // choose which type of laptops
+    printf("choose which type of model Laptop You want\nGAMING Laptop -> Enter 'G'\nPROFESSIONAL Laptop -> Enter 'P'\n");
+    scanf("%c",&purpose);
+    switch(purpose)
+    {
+    case 'G':case 'g':
+        printf("\nSir, You Select Gaming Laptop\nHere We have Gaming laptops starts from @ 20,000");
+        printf("\nMay I know Which price range laptop do you want?\n");
+        scanf("%d",&price);
+        // choose expected the price you want
+        // here 20k to 50k
+        if( (price>=20000)&&(price<50000) )
+        {
+            printf("\nHere the Laptops starts from 20k t0 50k");
+            printf("\nSir, We have 2 Brands under this Range : *ASUS* and *LENOVA*\nChoose which one You want Enter 'A' or 'L'\n");
+            // choose which brand you want
+            // here Asus and Lenova
+            scanf(" %c",&brand);
+            switch(brand)
+            {
+            case 'A':case 'a':
+                printf("\nYou select the ASUS Gaming laptop (ASUS vivobook pro 15)\nHere the Specifications\n--------------------------------------------\n");
+                printf("\nProcessor : AMD Ryzen 5 hexa core\nRAM|SSD storage : 8 GB | 512 GB\nOS : Windows 11");
+                printf("\nPrice : * 49,990 *\n\n\n\n");
+                break;
+            case 'L':case 'l':
+                printf("\nYou select the LENOVA Gaming laptop (LENOVA Ideapad Gaming 3)\nHere the Specifications\n---------------------------------------\n");
+                printf("\nProcessor : Intel core i5 11th Gen\nRAM|SSD storage : 8 GB | 512 GB\nOS : Windows 11");
+                printf("\nPrice : * 45,990 *\n\n\n\n");
+                break;
+            }
+        }
+        else if((price>=50000)&&(price<100000))
+        {
+            printf("\nHere the Laptops starts from 50k t0 100k");
+            printf("\nSir, We have 2 Brands under this Range : *ASUS* and *DELL*\nChoose which one You want Enter 'A' or 'D'\n");
+
+            scanf(" %c",&brand);
+            switch(brand)
+            {
+            case 'A':case 'a':
+                printf("\nYou select the ASUS Gaming laptop (ASUS ROG Strix G16)\nHere the Specifications\n-----------------------------------------------\n");
+                printf("\nProcessor : Intel core i5 13th Gen\nRAM|SSD storage : 16 GB | 1 TB\nOS : Windows 11");
+                printf("\nPrice : * 94,990 *\n\n\n\n");
+                break;
+            case 'D':case 'd':
+                printf("\nYou select the DELL Gaming laptop ( DELL G15 )\nHere the Specifications\n----------------------------------------------------\n");
+                printf("\nProcessor : Intel core i5 12th Gen\nRAM|SSD storage : 16 GB | 512 GB\nOS : Windows 11");
+                printf("\nPrice : * 70,990 *\n\n\n\n");
+                break;
+            }
+
+        }
+        else if((price>=100000)&&(price<=120000))
+        {
+            printf("\nHere the Laptops Above 100k");
+            printf("\nSir, We have 2 Brands under this Range : *ASUS* and *HP*\nChoose which one You want Enter 'A' or 'H'\n");
+            scanf(" %c",&brand);
+            switch(brand)
+            {
+            case 'A':case 'a':
+                printf("\nYou select the ASUS Gaming laptop (ASUS TUF Gaming F15)\nHere the Specifications\n----------------------------------------------\n");
+                printf("\nProcessor : Intel core i7 12th Gen\nRAM|SSD storage : 16 GB | 512 GB\nOS : Windows 11");
+                printf("\nPrice : * 1,04,990 *\n\n\n\n");
+                break;
+            case 'H':case 'h':
+                printf("\nYou select the HP Gaming laptop ( HP OMEN  )\nHere the Specifications\n------------------------------------------------------\n");
+                printf("\nProcessor : Intel core i5 13th Gen\nRAM|SSD storage : 16 GB | 512 GB\nOS : Windows 11");
+                printf("\nPrice : * 1,02,990 *\n\n\n\n");
+                break;
+            }
+        }
+        else
+        {
+            printf("\nSorry Sir, We Don't have Gaming Laptops Under this Range");
+
+        }
+        break;
+
+
+    case  'P':case 'p':
+        printf("\nSir, You Select Professional Laptop\nHere We have Professional laptops starts from @ 20,000");
+        printf("\nMay I know Which price range laptop do you want?\n");
+        scanf("%d",&price);
+        if( (price>=20000)&&(price<50000) )
+        {
+            printf("\nHere the Laptops starts from 20k t0 50k");
+            printf("\nSir, We have 2 Brands under this Range : *ASUS* and *LENOVA*\nChoose which one You want Enter 'A' or 'L'\n");
+            scanf(" %c",&brand);
+            switch(brand)
+            {
+            case 'A':case 'a':
+                printf("\nYou select the ASUS Professional laptop (ASUS vivobook pro )\nHere the Specifications\n-----------------------------------------\n");
+                printf("\nProcessor : Intel Core i5 11th Gen\nRAM|SSD storage : 8 GB | 512 GB\nOS : Windows 11");
+                printf("\nPrice : * 43,990 *\n\n\n\n");
+                break;
+            case 'L':case 'l':
+                printf("\nYou select the LENOVA Professional laptop (LENOVA IdeaPad Slim 3)\nHere the Specifications\n-----------------------------------------\n");
+                printf("\nProcessor : Intel core i5 11th Gen\nRAM|SSD storage : 16 GB | 512 GB\nOS : Windows 11");
+                printf("\nPrice : * 45,990 *\n\n\n\n");
+                break;
+            }
+        }
+        else if((price>=50000)&&(price<100000))
+        {
+            printf("\nHere the Laptops starts from 50k t0 100k");
+            printf("\nSir, We have 2 Brands under this Range : *ASUS* and *DELL*\nChoose which one You want Enter 'A' or 'D'\n");
+
+            scanf(" %c",&brand);
+            switch(brand)
+            {
+            case 'A':case 'a':
+                printf("\nYou select the ASUS Professional laptop (ASUS Vivobook S14 OLED)\nHere the Specifications\n------------------------------------------\n");
+                printf("\nProcessor : Intel core i5 12th Gen\nRAM|SSD storage : 16 GB | 512 GB\nOS : Windows 11");
+                printf("\nPrice : * 74,990 *\n\n\n\n");
+                break;
+            case 'D':case 'd':
+                printf("\nYou select the DELL Professional laptop ( DELL G15 )\nHere the Specifications\n-------------------------------------------------\n");
+                printf("\nProcessor : Intel core i5 13th Gen\nRAM|SSD storage : 8 GB | 1 TB\nOS : Windows 11");
+                printf("\nPrice : * 67,790 *\n\n\n\n");
+                break;
+            }
+        }
+        else if((price>=100000)&&(price<=120000))
+        {
+            printf("\nHere the Laptops Above 100k");
+            printf("\nSir, We have 2 Brands under this Range : *ASUS* and *HP*\nChoose which one You want Enter 'A' or 'H'\n");
+
+            scanf(" %c",&brand);
+            switch(brand)
+            {
+            case 'A':case 'a':
+                printf("\nYou select the ASUS Professional laptop (ASUS ROG Flow X13)\nHere the Specifications\n-------------------------------------------------\n");
+                printf("\nProcessor : AMD Ryzen 9 Octa Core\nRAM|SSD storage : 16 GB | 1 TB\nOS : Windows 11");
+                printf("\nPrice : * 1,14,990 *\n\n\n");
+                break;
+            case 'H':case 'h':
+                printf("\nYou select the HP Professional laptop ( HP Victus  )\nHere the Specifications\n--------------------------------------------------\n");
+                printf("\nProcessor : Intel core i7 13th Gen\nRAM|SSD storage : 16 GB | 512 GB\nOS : Windows 11");
+                printf("\nPrice : * 1,09,990 *\n\n\n\n");
+                break;
+            }
+
+        }
+        else
+        {
+            printf("\nSorry Sir, We Don't have Professional Laptops Under this Range");
+        }
+        break;
+    }
+}

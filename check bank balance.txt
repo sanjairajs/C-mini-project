@@ -1,0 +1,66 @@
+ #include<stdio.h>
+void deposit(int);
+int withdraw(int);
+void balancecheck();
+static int balance=5000; //static variable
+
+void main()
+{
+    char work;
+    int take,get;
+    do{
+         printf("\n\n\n----Welcome to Canara Bank----------");
+        printf(" \nwhich one you want \nwithdraw(w) \n Deposit(d)\n Balancecheck(b)\n Exit(e) \n");
+        scanf(" %c",&work);
+        switch(work)
+        {
+            case 'W':case 'w':                                      // withdraw
+                printf(" you are choose to withdraw the money \n ");
+                printf(" enter your withdraw amount \n");
+                scanf("%d",&take);
+                withdraw(take);
+                break;
+            case 'D':case 'd':                                      // deposit
+                printf(" you are choose to deposit the money \n ");
+                printf(" enter your deposit amount:\n");
+                scanf("%d",&get);
+                deposit(get);
+                break;
+            case 'B':case 'b':                                      // balancecheck
+                balancecheck();
+                break;
+            case 'E':case 'e':                                      // Exit
+                printf("Exit successfully");
+                break;
+        }
+        // int a=10;//instance variable
+
+    }while(work!='e'&&'E');
+}
+
+void deposit(int got)
+{
+    balance+=got;
+    printf("\n Successfully deposited in your account ");
+    printf("\ncurrently available your balance : %d",balance);
+}
+
+int withdraw(int wish)
+{
+    if(balance>=wish)
+    {
+        printf(" withdraw amount is :%d",wish);
+        balance-=wish;
+        printf("\ncurrently available your balance : %d",balance);
+    }
+    else{
+        printf(" your balance is low");
+    }
+    return -1;
+}
+void balancecheck()
+{
+    printf("\ncurrently available your balance : %d",balance);
+}
+
+ --------------Bank-------------------
